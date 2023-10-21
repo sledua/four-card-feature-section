@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Poppins-ExtraLight';
+  src: url('../font/Poppins-ExtraLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../font/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('../font/Poppins-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+:root {
+  --pr-red: hsl(0, 78%, 62%);
+  --pr-cyan: hsl(180, 62%, 55%);
+  --pr-orange: hsl(34, 97%, 64%);
+  --pr-blue: hsl(212, 86%, 64%);
+  --n-very-dark-blue: hsl(234, 12%, 34%);
+  --n-grayish-blue: hsl(229, 6%, 66%);
+  --n-very-light-gray: hsl(0, 0%, 98%);
+  --ff-poppins-ex-light: 'Poppins-ExtraLight', sans-serif;
+  --ff-poppins-regular: 'Poppins-Regular', sans-serif;
+  --ff-poppins-semibold: 'Poppins-SemiBold', sans-serif;
+}
+
+/* ! rest syle 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/* Typographic tweaks! 4. Add accessible line-height 5. Improve text rendering */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* ! rest style end */
+body {
+  font-family: var(--ff-poppins-regular);
+  display: grid;
+  margin: 2rem;
+  overflow-x: hidden;
+  background-color: var(--n-very-light-gray);
+}
+.section {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+}
+.title {
+  font-family: var(--ff-poppins-semibold);
+  line-height: 1.4;
+  color: var(--n-very-dark-blue);
+  text-align: center;
+}
+.title > span {
+  font-family: var(--ff-poppins-ex-light);
+  font-weight: 200;
+  color: var(--n-grayish-blue);
+}
+.section > .description {
+  text-align: center;
+}
+.description {
+  font-family: var(--ff-poppins-regular);
+  color: var(--n-grayish-blue);
+  font-size: .94rem;
+  line-height: 1.4;
+}
+.card__container {
+  display: grid;
+  gap: 1.4rem;
+}
+.card__item {
+  background-color: white;
+  border-radius: .5em;
+  border-top: 3px solid white;
+}
+.card__item > img {
+  width: 64px;
+  height: 64px;
+  
+}
+.border-one {
+  border-top: 3px solid var(--pr-cyan);
+}
+.border-two {
+  border-top: 3px solid var(--pr-red);
+}
+.border-tree {
+  border-top: 3px solid var(--pr-orange);
+}
+.border-x {
+  border-top: 3px solid var(--pr-blue);
+}
