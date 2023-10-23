@@ -84,18 +84,21 @@ h6 {
 body {
   font-family: var(--ff-poppins-regular);
   display: grid;
-  margin: 2rem;
+  margin: 2.5rem;
   overflow-x: hidden;
   background-color: var(--n-very-light-gray);
 }
-.section {
+section {
   display: grid;
   justify-items: center;
   gap: 2rem;
+  margin-top: 4.5rem;
+  padding-bottom: 4rem;
 }
 .title {
   font-family: var(--ff-poppins-semibold);
-  line-height: 1.4;
+  font-size: 2rem;
+  line-height: 1.5;
   color: var(--n-very-dark-blue);
   text-align: center;
 }
@@ -104,28 +107,40 @@ body {
   font-weight: 200;
   color: var(--n-grayish-blue);
 }
-.section > .description {
+/* .section > .description {
   text-align: center;
-}
+} */
 .description {
   font-family: var(--ff-poppins-regular);
   color: var(--n-grayish-blue);
-  font-size: .94rem;
-  line-height: 1.4;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: center;
 }
 .card__container {
   display: grid;
   gap: 1.4rem;
+  margin-top: 4rem;
 }
 .card__item {
+  display: inherit;
+  padding: 2rem;
   background-color: white;
   border-radius: .5em;
   border-top: 3px solid white;
+  box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.card__discription {
+  font-family: var(--ff-poppins-regular);
+  color: var(--n-grayish-blue);
+  font-size: 1rem;
+  padding-top: 0.5rem;
 }
 .card__item > img {
   width: 64px;
   height: 64px;
-  
+  margin-top: 2rem;
+  justify-self: end;
 }
 .border-one {
   border-top: 3px solid var(--pr-cyan);
