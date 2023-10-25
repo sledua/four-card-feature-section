@@ -92,8 +92,6 @@ section {
   display: grid;
   justify-items: center;
   gap: 2rem;
-  margin-top: 4.5rem;
-  padding-bottom: 4rem;
 }
 .title {
   font-family: var(--ff-poppins-semibold);
@@ -107,9 +105,6 @@ section {
   font-weight: 200;
   color: var(--n-grayish-blue);
 }
-/* .section > .description {
-  text-align: center;
-} */
 .description {
   font-family: var(--ff-poppins-regular);
   color: var(--n-grayish-blue);
@@ -153,4 +148,56 @@ section {
 }
 .border-x {
   border-top: 3px solid var(--pr-blue);
+}
+@media (min-width: 750px) {
+  body {
+    margin: 0;
+  }
+  section {
+    --des-width: 50%;
+  }
+  .title span{
+    display: block;
+  }
+  .description {
+    width: var(--des-width);
+  }
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0;
+    justify-items: center;
+    align-content: space-around;
+    grid-template-areas: 
+    "a b d" 
+    "a c d";
+  }
+  .card__item {
+    width: calc(var(--des-width) + 25%);
+    height: calc(var(--des-width) + 45%);
+    
+  }
+  .card__discription {
+    font-size: 0.8rem;
+  }
+  .border-one {
+    grid-area: a;
+    align-self: center;
+    justify-self: end;
+    height: var(--des-width) + 45%;
+  }
+  .border-two {
+    grid-area: b;
+    align-self: center;
+  }
+  .border-tree {
+    grid-area: c;
+    align-self: center;
+  }
+  .border-x {
+    grid-area: d;
+    align-self: center;
+    justify-self: start;
+    height: var(--des-width) + 45%;
+  }
 }
